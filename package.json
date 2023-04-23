@@ -1,49 +1,16 @@
 {
-  "name": "paper-house",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@ethersproject/providers": "^5.5.3",
-    "@portis/web3": "^4.0.5",
-    "@reduxjs/toolkit": "^1.6.1",
-    "axios": "^0.18.1",
-    "ethereum-blockies-base64": "^1.0.2",
-    "framer-motion": "^4.1.17",
-    "hamburger-react": "^2.4.1",
-    "nft.storage": "^3.0.1",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-loading-skeleton": "^2.2.0",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.1",
-    "react-select": "^4.3.1",
-    "react-toastify": "^7.0.4",
-    "web3": "^1.9.0"
-  },
+  "name": "thepaperhousegraph",
+  "license": "UNLICENSED",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ sairajk19/thepaperhousegraph",
+    "create-local": "graph create --node http://localhost:8020/ sairajk19/thepaperhousegraph",
+    "remove-local": "graph remove --node http://localhost:8020/ sairajk19/thepaperhousegraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 sairajk19/thepaperhousegraph"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@iconify/icons-akar-icons": "^1.1.16",
-    "@iconify/react": "^1.1.4"
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.20.1",
+    "@graphprotocol/graph-ts": "0.20.0"
   }
 }
